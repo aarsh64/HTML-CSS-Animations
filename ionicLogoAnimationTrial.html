@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<style>
+.blueSteadyCircle{
+    height:65px;
+    width:65px;
+    background-color: #478AFE;
+    border-radius: 100%;
+    margin-left:27px;
+    margin-top:27px;
+}
+.innerWhiteRing{
+    position:absolute;
+    margin-top:13px;
+    margin-left:13px;
+    height: 120px;
+    width: 120px;
+    border-radius: 100%;
+    background-color:white;
+}
+.outerBlueRing{
+    top:92px;
+    left:255px;
+    height: 145px;
+    width: 145px;
+    border-radius: 100%;
+    background-color: #478AFE;
+    position: relative;
+ }
+@-webkit-keyframes rounds {
+    from { -webkit-transform: rotate(0deg) translateX(10px) rotate(0deg); }
+    to   { -webkit-transform: rotate(360deg) translateX(10px) rotate(-360deg); }
+}
+@keyframes rounds {
+    from { transform: rotate(0deg) translateX(70px) rotate(0deg); }
+    to   { transform: rotate(360deg) translateX(70px) rotate(-360deg); }
+}
+.outerWhitePart{
+    margin-top:8px;
+    position:absolute;
+    height: 34px;
+    width: 34px;
+    border-radius: 100%;
+    background-color:white;
+    border-width: 15px;
+    /* transform:rotate(45deg) translateX(0px) rotate(-45deg);
+    -webkit-animation: rounds 4s linear infinite; */ 
+}
+.movingBlueDot{
+    height:24px;
+    width:24px;
+    margin-left:5px;
+    margin-top:5px;
+    position: relative;
+    background-color:#478AFE ;
+    border-radius: 100%;
+}
+.movingParticle{
+    left:318px;
+    top:145px;
+    z-index: 100;
+    position: absolute;
+    /* transform:rotate(45deg) translateX(0px) rotate(-45deg); */
+    -webkit-animation: rounds 5s linear infinite;
+  }
+
+</style>
+
+<!-- the rotating part -->
+ <div class=movingParticle>
+    <div class=outerWhitePart>
+         <div class="movingBlueDot">    
+         </div>
+    </div>
+ </div>
+
+ <!-- the bigger circle -->
+ <div class=outerBlueRing>
+     <div class=innerWhiteRing>
+         <div class="blueSteadyCircle">
+        </div>
+     </div>
+</div>
+
+</html>
